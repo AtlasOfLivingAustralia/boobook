@@ -1,0 +1,27 @@
+Package: boobook
+Type: Package
+Title: Tools for calling the Zotero API
+Version: 0.1.0
+Authors@R:
+    c(person(given = "Martin",
+             family = "Westgate",
+             email = "martin.westgate@csiro.au",
+             role = c("aut", "cre")))
+Description: Tools for calling Zotero API. Also a test package for httr2.
+Depends: 
+  R (>= 4.1.0)
+Imports:
+  glue,
+  httr2,
+  rlang,
+  tibble
+Remotes:
+  atlasoflivingaustralia/potions
+Suggests:
+  httptest2,
+  remotes,
+  testthat
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.1
