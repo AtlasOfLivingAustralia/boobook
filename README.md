@@ -25,8 +25,9 @@ are enacted via a call to `collect()`
 
 ```
 zotero() |>
-  user(id = "12345") |>
-  items()
+  users(id = "12345") |>
+  items() |>
+  collect()
 ```
 
 Alternatively, `user_id`, `group_id` or `api_key` can be stored via `zotero_config()`
@@ -35,6 +36,39 @@ Alternatively, `user_id`, `group_id` or `api_key` can be stored via `zotero_conf
 zotero_config(user_id = "12345")
 
 zotero() |>
-  user() |>
-  tags()
+  users() |>
+  tags() |> 
+  collect()
+```
+
+Some example use cases:
+```
+zotero_config(api_key = "6789")
+
+# find user ID and privileges of a specified API key
+# NOTE: not implemented yet
+zotero() |> 
+  keys() |> 
+  collect()
+zotero_config(user_id = "12345") # add to config
+
+# find what groups are available
+zotero() |> 
+  users() |>
+  groups() |> 
+  collect()
+zotero_config(group_id = "ABCD") # add to config
+
+# find tags for a specified group
+zotero() |> 
+  groups() |> 
+  tags() |> 
+  collect()
+
+# find items in a group with a specific tag
+# NOTE: not implemented yet
+zotero() |> 
+  groups() |> 
+  items() |> 
+  tags(id = "tag+name")
 ```

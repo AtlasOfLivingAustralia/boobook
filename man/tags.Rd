@@ -2,7 +2,7 @@
 % Please edit documentation in R/tags.R
 \name{tags}
 \alias{tags}
-\title{Download tag data from Zotero}
+\title{Add tag data to a Zotero API call}
 \usage{
 tags(x)
 }

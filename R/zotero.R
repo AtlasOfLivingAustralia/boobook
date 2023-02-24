@@ -4,7 +4,7 @@
 #' to pipe arguments to construct and enact a query
 #' @export
 zotero <- function(){
-  x <- list()
+  x <- list(base_url = "https://api.zotero.org")
   class(x) <- "zotero"
   return(x)
 }
