@@ -5,12 +5,12 @@
 \alias{zotero}
 \title{Start a pipe for querying Zotero}
 \usage{
-\method{print}{zotero}(x, ...)
+\method{print}{zotero}(.data, ...)
 
 zotero()
 }
 \arguments{
-\item{x}{An object of class `zotero`}
+\item{.data}{An object of class `zotero`}
 
 \item{...}{Any further arguments (currently ignored)}
 }

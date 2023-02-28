@@ -4,10 +4,10 @@
 \alias{groups}
 \title{Add a group to a Zotero API call}
 \usage{
-groups(x, id)
+groups(.data)
 }
 \arguments{
-\item{x}{An object of class `zotero`}
+\item{.data}{An object of class `zotero`}
 }
 \description{
 Designed to be piped following a `zotero()` call.

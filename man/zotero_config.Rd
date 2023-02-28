@@ -4,11 +4,20 @@
 \alias{zotero_config}
 \title{Configure a zotero session}
 \usage{
-zotero_config(user_id = NULL, group_id = NULL, api_key = NULL)
+zotero_config(user_id = NULL, group_id = NULL, api_key = NULL, clear = FALSE)
 }
 \arguments{
-\item{x}{a list of configurable options}
+\item{user_id}{Unique identifier for users}
+
+\item{group_id}{Unique identifier for groups}
+
+\item{api_key}{A Zotero API key}
+
+\item{clear}{(logical) Should the cache be cleared? This will forget all previous arguments}
 }
 \description{
 Simple config stuff
+}
+\details{
+This function automatically converts supplied arguments to strings (class `character`).
 }

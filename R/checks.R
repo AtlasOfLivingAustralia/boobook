@@ -4,7 +4,7 @@
 #' @importFrom rlang abort
 check_zotero_object <- function(x){
   if(missing(x)){
-    bullets <- c("Object `x` is missing, with no default",
+    bullets <- c("Object `.data` is missing, with no default",
                  i = "Pipes made with `{boobook}` should start with `zotero()`")
     abort(bullets)
   }else{
@@ -30,14 +30,15 @@ check_supplied_id <- function(id, type){
       abort("`id` is missing, with no default")
     }
   }
+  return(id)
 }
 
 ## is there a way to check whether an API key is actually required?
-check_api_key <- function(x){
-  if(is.null(x$api_key)){
-    stored_api <- pour("api_key", slot_name = "boobook")
-    if(is.null(stored_api)){
-      abort("`api_key` is missing, with no default; set using `zotero_config()")
-    }
-  }
-}
+# check_api_key <- function(x){
+#   if(is.null(x$api_key)){
+#     stored_api <- pour("api_key", slot_name = "boobook")
+#     if(is.null(stored_api)){
+#       abort("`api_key` is missing, with no default; set using `zotero_config()")
+#     }
+#   }
+# }

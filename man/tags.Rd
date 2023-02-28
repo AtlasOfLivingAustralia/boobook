@@ -4,10 +4,12 @@
 \alias{tags}
 \title{Add tag data to a Zotero API call}
 \usage{
-tags(x)
+tags(.data, id)
 }
 \arguments{
-\item{x}{An object of class `zotero`}
+\item{.data}{An object of class `zotero`}
+
+\item{id}{An (optional) id to look up}
 }
 \description{
 First attempt

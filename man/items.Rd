@@ -4,10 +4,10 @@
 \alias{items}
 \title{Add item data to a Zotero API call}
 \usage{
-items(x, id)
+items(.data, id)
 }
 \arguments{
-\item{x}{An object of class `zotero`}
+\item{.data}{An object of class `zotero`}
 
 \item{id}{An (optional) id to look up}
 }
