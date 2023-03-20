@@ -9,7 +9,8 @@
 \arguments{
 \item{.data}{An object of class `zotero`}
 
-\item{...}{additional}
+\item{...}{additional
+importFrom glue glue}
 }
 \description{
 Test port from {dplyr}

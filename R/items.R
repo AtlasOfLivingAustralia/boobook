@@ -3,6 +3,7 @@
 #' First attempt
 #' @param .data An object of class `zotero`
 #' @param id An (optional) id to look up
+#' @importFrom glue glue_collapse
 #' @export
 items <- function(.data, id){
   x <- .data
@@ -15,7 +16,7 @@ items <- function(.data, id){
   if(missing(id)){
     value <- str_value
   }else{
-    value <- paste(str_value, id, sep = "/")
+    value <- glue_collapse(c(str_value, id), sep = "/")
   }
 
   # add to x and return

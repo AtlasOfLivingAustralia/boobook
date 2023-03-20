@@ -41,11 +41,14 @@ collect.zotero <- function(.data, path){
   # run the query
   # Q: how to add `path` here?
   result <- req_perform(req)
-  do.call(paste0("parse_", parser), list(result))
+  do.call(glue("parse_{parser}"), list(result))
 }
 
 
+#' @keywords internal
+#' importFrom glue glue_collapse
+#' @noRd
 construct_url <- function(x){
-  result <- paste(unlist(x), collapse = "/")
+  result <- glue_collapse(unlist(x), sep = "/")
   gsub("\\/\\?", "\\?", result)
 }

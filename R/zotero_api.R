@@ -1,4 +1,8 @@
-# Early code to collect zotero groups
+# Everything in this script is old code - do not export
+
+#' Early code to collect zotero groups
+#' @keywords internal
+#' @noRd
 zotero_groups <- function(user_id, api_key){
 
   if(missing(user_id)){
@@ -26,7 +30,9 @@ zotero_groups <- function(user_id, api_key){
 }
 
 
-# early code to collect zotero tags
+#' early code to collect zotero tags
+#' @keywords internal
+#' @noRd
 zotero_tags <- function(user_id, group_id, api_key){
 
   if(missing(user_id) & missing(group_id)){
@@ -61,7 +67,9 @@ zotero_tags <- function(user_id, group_id, api_key){
 }
 
 
-# Early code to collect zotero items listed under a specific tag
+#' Early code to collect zotero items listed under a specific tag
+#' @keywords internal
+#' @noRd
 zotero_items_by_tag <- function(user_id, group_id, api_key, tag){
 
   if(missing(user_id) & missing(group_id)){
@@ -102,7 +110,9 @@ zotero_items_by_tag <- function(user_id, group_id, api_key, tag){
 }
 
 
-# Zotero attachments listed under a given itemKey
+#' Zotero attachments listed under a given itemKey
+#' @keywords internal
+#' @noRd
 zotero_attachments <- function(user_id, group_id, api_key, item_key){
 
   if(missing(user_id) & missing(group_id)){

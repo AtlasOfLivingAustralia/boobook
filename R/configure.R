@@ -16,6 +16,8 @@
 #' or `api_key` will overrule use of the defaults as stored in `zotero_config()`.
 #' In such cases, however, the defaults stored in `zotero_config` will not
 #' themselves be overwritten.
+#' @importFrom glue glue
+#' @importFrom glue glue_collapse
 #' @export
 configure <- function(.data, ..., user_id, group_id, api_key){
 
@@ -46,23 +48,23 @@ configure <- function(.data, ..., user_id, group_id, api_key){
         if(is.null(x)){
           # abort if this information doesn't exist
           bullets <- c(
-            paste0("Argument `", current_arg, "` has not been specified"),
-            i = paste0("Try using `zotero_config()` to set `", current_arg, "` globally,"),
-            i = paste0("Or use `configure(", current_arg, " = ...)` to set for this call."))
+            glue("Argument `{current_arg}` has not been specified"),
+            i = glue("Try using `zotero_config()` to set `{current_arg}` globally")
+          )
           abort(bullets)
         }else{
           switch(current_arg,
-                 "group_id" = paste0("groups/", x),
-                 "user_id" = paste0("users/", x),
+                 "group_id" = glue("groups/{x}"),
+                 "user_id" = glue("users/{x}"),
                  "api_key" = x)
         }
       })
       names(result) <- dot_vec
     # if supplied names are invalid, abort
     }else{
+      invalid_fields <- glue_collapse(dot_vec[!dots_ok], sep = ", ", last = " and ")
       bullets <- c(
-        paste0("Invalid fields detected: ",
-               paste(dot_vec[!dots_ok], collapse = ", ")),
+        glue("Invalid fields detected: {invalid_fields}"),
         i = "Valid fields are `user_id`, `group_id` or `api_key`") |>
       abort()
     }
@@ -75,10 +77,10 @@ configure <- function(.data, ..., user_id, group_id, api_key){
   # Note: putting this after the dots processing step is deliberate,
   # as it ensures defaults are overwritten by default
   if(!missing(user_id)){
-    result$user_id <- paste0("users/", user_id)
+    result$user_id <- glue("users/{user_id}")
   }
   if(!missing(group_id)){
-    result$group_id <- paste0("groups/", group_id)
+    result$group_id <- glue("groups/{group_id}")
   }
   if(!missing(api_key)){
     result$add_api_key <- api_key
