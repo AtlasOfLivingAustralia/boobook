@@ -3,7 +3,6 @@
 #' Function to catch data from pipes, pass to Zotero API, and return a tibble
 #' @param .data An object of class `zotero`
 #' @param path An (optional) path to download files to
-#' @importFrom potions pour
 #' @importFrom httr2 request
 #' @importFrom httr2 req_headers
 #' @importFrom httr2 req_perform

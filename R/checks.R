@@ -2,6 +2,8 @@
 # and return associated errors where applicable
 
 #' @importFrom rlang abort
+#' @keywords internal
+#' @noRd
 check_zotero_object <- function(x){
   if(missing(x)){
     bullets <- c("Object `.data` is missing, with no default",
@@ -14,6 +16,8 @@ check_zotero_object <- function(x){
   }
 }
 
+#' @keywords internal
+#' @noRd
 check_id_present <- function(x){
   if(!any(names(x) == "user_or_group_id")){
     bullets <- c("please specify either a user or group ID",
@@ -23,9 +27,12 @@ check_id_present <- function(x){
   }
 }
 
+#' @importFrom potions pour
+#' @keywords internal
+#' @noRd
 check_supplied_id <- function(id, type){
   if(missing(id)){
-    id <- pour(type, slot_name = "boobook")
+    id <- pour(type)
     if(is.null(id)){
       abort("`id` is missing, with no default")
     }
@@ -36,7 +43,7 @@ check_supplied_id <- function(id, type){
 ## is there a way to check whether an API key is actually required?
 # check_api_key <- function(x){
 #   if(is.null(x$api_key)){
-#     stored_api <- pour("api_key", slot_name = "boobook")
+#     stored_api <- pour("api_key")
 #     if(is.null(stored_api)){
 #       abort("`api_key` is missing, with no default; set using `zotero_config()")
 #     }

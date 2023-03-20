@@ -42,7 +42,7 @@ configure <- function(.data, ..., user_id, group_id, api_key){
       # extract the requested info from `zotero_config()`
       result <- lapply(seq_along(dot_vec), function(a){
         current_arg <- dot_vec[a]
-        x <- pour(current_arg, slot_name = "boobook")
+        x <- pour(current_arg)
         if(is.null(x)){
           # abort if this information doesn't exist
           bullets <- c(

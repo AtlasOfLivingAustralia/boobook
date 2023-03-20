@@ -5,7 +5,11 @@
 \alias{boobook}
 \title{Tools for calling the Zotero API (v3)}
 \description{
-This is early days, still working on it.
+Zotero (https://www.zotero.org) is a bibliographic management tool. It
+includes an online version whereby data can be accessed through an API.
+
+To import data exported from a desktop version of Zotero - where files are
+stored locally - try using `{synthesisr}` instead.
 }
 \section{Functions}{
 

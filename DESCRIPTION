@@ -13,10 +13,9 @@ Depends:
 Imports:
   dplyr,
   httr2,
+  potions,
   rlang,
   tibble
-Remotes:
-  atlasoflivingaustralia/potions
 Suggests:
     httptest2,
     remotes,
