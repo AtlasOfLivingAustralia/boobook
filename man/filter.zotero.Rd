@@ -7,7 +7,7 @@
 \method{filter}{zotero}(.data, ...)
 }
 \arguments{
-\item{.data}{An object of class `zotero`}
+\item{.data}{An object of class \code{zotero}}
 
 \item{...}{additional
 importFrom glue glue}

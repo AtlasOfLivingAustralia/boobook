@@ -72,7 +72,7 @@ zotero() |>
 
 ## Dependencies
 
-`{boobook} is built around a tidy workflow and relies on the following packages:
+`{boobook}` is built around a tidy workflow and relies on the following packages:
 
 - `{httr2}` for queries
 - `{rlang}` for error handling

@@ -17,11 +17,11 @@ zotero_config(user_id, group_id, api_key, clear = FALSE)
 previous arguments}
 }
 \description{
-Store configuration options such as `user_id`, `group_id` or `api_key` that
+Store configuration options such as \code{user_id}, \code{group_id} or \code{api_key} that
 can be used later without manual specification in each pipe. Alternatively,
-a path to a configuration `file`
+a path to a configuration \code{file}
 }
 \details{
 This function automatically converts supplied arguments to strings
-(class `character`).
+(class \code{character}).
 }

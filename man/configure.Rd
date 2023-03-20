@@ -16,7 +16,7 @@ add_key(.data, api_key)
 configure(.data, ..., user_id, group_id, api_key)
 }
 \arguments{
-\item{.data}{An object of class `zotero`}
+\item{.data}{An object of class \code{zotero}}
 
 \item{user_id}{Optionally specify the user ID}
 
@@ -24,20 +24,20 @@ configure(.data, ..., user_id, group_id, api_key)
 
 \item{api_key}{Optionally specify the API key}
 
-\item{...}{fields to be pulled from `zotero_config` (optional)}
+\item{...}{fields to be pulled from \code{zotero_config} (optional)}
 }
 \description{
 Functions to allow the user to specify which identifiers should be passed to
 an API call.
 }
 \details{
-`configure()` is a catch-all function that tries to do sensible things
-when passing user data to a `zotero` call. Alternatively, the microfunctions
-`add_user()`, `add_group()` and `add_key()` each add individual pieces of
+\code{configure()} is a catch-all function that tries to do sensible things
+when passing user data to a \code{zotero} call. Alternatively, the microfunctions
+\code{add_user()}, \code{add_group()} and \code{add_key()} each add individual pieces of
 information, with fewer checks.
 
-Regardless of which function is used, specifying any of `user_id`, `group_id`
-or `api_key` will overrule use of the defaults as stored in `zotero_config()`.
-In such cases, however, the defaults stored in `zotero_config` will not
+Regardless of which function is used, specifying any of \code{user_id}, \code{group_id}
+or \code{api_key} will overrule use of the defaults as stored in \code{zotero_config()}.
+In such cases, however, the defaults stored in \code{zotero_config} will not
 themselves be overwritten.
 }

@@ -10,7 +10,7 @@
 zotero()
 }
 \arguments{
-\item{.data}{An object of class `zotero`}
+\item{.data}{An object of class \code{zotero}}
 
 \item{...}{Any further arguments (currently ignored)}
 }

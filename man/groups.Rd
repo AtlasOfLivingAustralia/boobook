@@ -7,8 +7,8 @@
 groups(.data)
 }
 \arguments{
-\item{.data}{An object of class `zotero`}
+\item{.data}{An object of class \code{zotero}}
 }
 \description{
-Designed to be piped following a `zotero()` call.
+Designed to be piped following a \code{zotero()} call.
 }

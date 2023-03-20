@@ -10,19 +10,16 @@
 #' @name boobook
 #' @docType package
 #' @section Functions:
-#' **Infrastructure**
+#' \itemize{
 #'
-#'    * [zotero_config()] Store information on user or group IDs, or API keys
-#'    * [zotero()] Start a pipe
-#'    * [configure()] Specify which identifiers to pass to the API
-#'    * [collect.zotero()] Make an API call
-#'
-#' **Specify required data**
-#'
-#'    * [groups()]
-#'    * [items()]
-#'    * [collections()]
-#'    * [tags()]
-#'    * [filter.zotero()] Filtering (may not work properly yet)
-#'
+#'    \item{[zotero_config()] Store information on user or group IDs, or API keys}
+#'    \item{[zotero()] Start a pipe}
+#'    \item{[configure()] Specify which identifiers to pass to the API}
+#'    \item{[collect.zotero()] Make an API call}
+#'    \item{[groups()]}
+#'    \item{[items()]}
+#'    \item{[collections()]}
+#'    \item{[tags()]}
+#'    \item{[filter.zotero()] Filtering (may not work properly yet)}
+#'}
 NULL

@@ -7,7 +7,7 @@
 collections(.data, id)
 }
 \arguments{
-\item{.data}{An object of class `zotero`}
+\item{.data}{An object of class \code{zotero}}
 
 \item{id}{An (optional) id to look up}
 }

@@ -9,23 +9,21 @@ Zotero (https://www.zotero.org) is a bibliographic management tool. It
 includes an online version whereby data can be accessed through an API.
 
 To import data exported from a desktop version of Zotero - where files are
-stored locally - try using `{synthesisr}` instead.
+stored locally - try using \code{{synthesisr}} instead.
 }
 \section{Functions}{
 
-**Infrastructure**
+\itemize{
 
-   * [zotero_config()] Store information on user or group IDs, or API keys
-   * [zotero()] Start a pipe
-   * [configure()] Specify which identifiers to pass to the API
-   * [collect.zotero()] Make an API call
-
-**Specify required data**
-
-   * [groups()]
-   * [items()]
-   * [collections()]
-   * [tags()]
-   * [filter.zotero()] Filtering (may not work properly yet)
+\item{\code{\link[=zotero_config]{zotero_config()}} Store information on user or group IDs, or API keys}
+\item{\code{\link[=zotero]{zotero()}} Start a pipe}
+\item{\code{\link[=configure]{configure()}} Specify which identifiers to pass to the API}
+\item{\code{\link[=collect.zotero]{collect.zotero()}} Make an API call}
+\item{\code{\link[=groups]{groups()}}}
+\item{\code{\link[=items]{items()}}}
+\item{\code{\link[=collections]{collections()}}}
+\item{\code{\link[=tags]{tags()}}}
+\item{\code{\link[=filter.zotero]{filter.zotero()}} Filtering (may not work properly yet)}
+}
 }
 
