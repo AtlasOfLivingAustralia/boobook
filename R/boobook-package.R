@@ -14,7 +14,7 @@
 #'
 #'    \item{[zotero_config()] Store information on user or group IDs, or API keys}
 #'    \item{[zotero()] Start a pipe}
-#'    \item{[configure()] Specify which identifiers to pass to the API}
+#'    \item{[add_config()] Specify which identifiers to pass to the API}
 #'    \item{[collect.zotero()] Make an API call}
 #'    \item{[groups()]}
 #'    \item{[items()]}

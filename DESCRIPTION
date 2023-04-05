@@ -9,13 +9,13 @@ Authors@R:
              role = c("aut", "cre")))
 Description: Tools for calling Zotero API. Also a test package for httr2.
 Depends: 
-  R (>= 4.1.0)
+    R (>= 4.1.0)
 Imports:
-  dplyr,
-  httr2,
-  potions,
-  rlang,
-  tibble
+    dplyr,
+    httr2,
+    potions,
+    rlang,
+    tibble
 Suggests:
     httptest2,
     remotes,

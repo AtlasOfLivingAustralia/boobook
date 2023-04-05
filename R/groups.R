@@ -4,10 +4,9 @@
 #' @param .data An object of class `zotero`
 #' @export
 groups <- function(.data){
-  x <- .data
-  check_zotero_object(x)
-  next_entry <- length(x) + 1
-  x[next_entry] <- "groups"
-  names(x)[next_entry] <- "groups"
-  return(x)
+  check_zotero_object(.data)
+  next_entry <- length(.data) + 1
+  .data[next_entry] <- "groups"
+  names(.data)[next_entry] <- "groups"
+  return(.data)
 }

@@ -17,7 +17,7 @@ stored locally - try using \code{{synthesisr}} instead.
 
 \item{\code{\link[=zotero_config]{zotero_config()}} Store information on user or group IDs, or API keys}
 \item{\code{\link[=zotero]{zotero()}} Start a pipe}
-\item{\code{\link[=configure]{configure()}} Specify which identifiers to pass to the API}
+\item{\code{\link[=add_config]{add_config()}} Specify which identifiers to pass to the API}
 \item{\code{\link[=collect.zotero]{collect.zotero()}} Make an API call}
 \item{\code{\link[=groups]{groups()}}}
 \item{\code{\link[=items]{items()}}}
